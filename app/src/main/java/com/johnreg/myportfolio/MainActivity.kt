@@ -1,14 +1,18 @@
 package com.johnreg.myportfolio
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.johnreg.myportfolio.databinding.ActivityMainBinding
 import com.johnreg.myportfolio.model.Item
+import com.johnreg.myportfolio.projects.startfirstapp.StartActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private val projectsAdapter by lazy { ProjectsAdapter(getProjects()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +20,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.rvProjects.layoutManager = LinearLayoutManager(this)
-        binding.rvProjects.adapter = ProjectsAdapter(getProjects())
+        binding.rvProjects.adapter = projectsAdapter
+        projectsAdapter.setOnClickListener(object : ProjectsAdapter.OnClickListener {
+            override fun onClick(project: Item, position: Int) {
+                val intent = parseIntToIntent(position)
+                startActivity(intent)
+            }
+        })
     }
 
     private fun getProjects(): List<Item> = listOf(
@@ -46,5 +56,10 @@ class MainActivity : AppCompatActivity() {
             R.drawable.restaurant
         )
     )
+
+    private fun parseIntToIntent(int: Int): Intent = when (int) {
+        0 -> Intent(this, StartActivity::class.java)
+        else -> Intent(this, MainActivity::class.java)
+    }
 
 }
