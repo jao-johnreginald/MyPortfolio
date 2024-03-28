@@ -2,5 +2,5 @@
     <string name="app_name">My Portfolio</string>
     <string name="project_image">project image</string>
     <string name="hello_world">Hello World!</string>
-    <string name="quote">Programming isn\'t about what you know; it\'s about what you can figure out.</string>
+    <string name="quote">Hello! Here is a quote for you. Programming isn\'t about what you know; it\'s about what you can figure out.</string>
 </resources>
