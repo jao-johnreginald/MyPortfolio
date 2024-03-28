@@ -15,6 +15,7 @@
         <activity
             android:name=".projects.startfirstapp.StartActivity"
             android:exported="false"
+            android:label="Start"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"

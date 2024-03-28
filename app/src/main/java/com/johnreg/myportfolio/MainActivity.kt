@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             R.drawable.ruler
         ),
         Item(
-            "McReginald's Restaurant",
+            "Reginald's Restaurant",
             "A menu app for a fictional restaurant, learning about Activities, Classes & Objects, Arrays, Intents and ListViews",
             R.drawable.restaurant
         )
