@@ -1,4 +1,4 @@
-package com.johnreg.myportfolio.projects.startfirstapp;
+package com.johnreg.myportfolio.firstprojects;
 
 import android.os.Bundle;
 

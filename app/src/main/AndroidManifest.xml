@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyPortfolio"
         tools:targetApi="31">
         <activity
-            android:name=".projects.startfirstapp.StartActivity"
+            android:name=".firstprojects.StartActivity"
             android:exported="false"
             android:label="Start"
             android:parentActivityName=".MainActivity" />

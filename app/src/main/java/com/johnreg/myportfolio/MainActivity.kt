@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.johnreg.myportfolio.databinding.ActivityMainBinding
 import com.johnreg.myportfolio.model.Item
-import com.johnreg.myportfolio.projects.startfirstapp.StartActivity
+import com.johnreg.myportfolio.firstprojects.StartActivity
 
 class MainActivity : AppCompatActivity() {
 
