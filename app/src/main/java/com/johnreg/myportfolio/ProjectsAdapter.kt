@@ -31,12 +31,12 @@ class ProjectsAdapter(
             binding.tvTitle.text = project.name
             binding.tvDescription.text = project.description
             binding.ivIcon.setImageResource(project.image)
-            itemView.setOnClickListener { onClickListener?.onClick(project) }
+            itemView.setOnClickListener { onClickListener?.onClick(project, adapterPosition) }
         }
     }
 
     interface OnClickListener {
-        fun onClick(project: Item)
+        fun onClick(project: Item, position: Int)
     }
 
     fun setOnClickListener(listener: OnClickListener) {
