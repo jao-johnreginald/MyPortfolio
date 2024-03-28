@@ -22,8 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvProjects.layoutManager = LinearLayoutManager(this)
         binding.rvProjects.adapter = projectsAdapter
+
         projectsAdapter.setOnClickListener(object : ProjectsAdapter.OnClickListener {
-            override fun onClick(project: Item, position: Int) {
+            override fun onClick(position: Int) {
                 val intent = parseIntToIntent(position)
                 startActivity(intent)
             }
@@ -38,22 +39,22 @@ class MainActivity : AppCompatActivity() {
         ),
         Item(
             "Quote Project",
-            "Making a simple change to the layout, with my own personal motivational quote for software developers",
+            "Making a simple change to the layout, with my own personal motivational quote for software developers.",
             R.drawable.quote
         ),
         Item(
             "BMI Calculator",
-            "A real life working BMI calculator teaching me Variables, Methods and Conditional Logic",
+            "A real life working BMI calculator teaching me Variables, Methods and Conditional Logic.",
             R.drawable.calculator
         ),
         Item(
             "Inches to Meters Converter",
-            "My own personal calculator app I made on my own to convert inches to meters",
+            "My own personal calculator app I made on my own to convert inches to meters.",
             R.drawable.ruler
         ),
         Item(
             "Reginald's Restaurant",
-            "A menu app for a fictional restaurant, learning about Activities, Classes & Objects, Arrays, Intents and ListViews",
+            "A menu app for a fictional restaurant, learning about Activities, Classes & Objects, Arrays, Intents and ListViews.",
             R.drawable.restaurant
         )
     )
