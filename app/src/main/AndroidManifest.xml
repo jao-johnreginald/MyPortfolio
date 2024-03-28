@@ -13,6 +13,11 @@
         android:theme="@style/Theme.MyPortfolio"
         tools:targetApi="31">
         <activity
+            android:name=".firstprojects.QuoteActivity"
+            android:exported="false"
+            android:label="Quote Project"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".firstprojects.StartActivity"
             android:exported="false"
             android:label="Start"
