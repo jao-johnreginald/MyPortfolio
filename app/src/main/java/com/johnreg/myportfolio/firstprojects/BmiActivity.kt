@@ -72,16 +72,22 @@ class BmiActivity : AppCompatActivity() {
     }
 
     private fun getResultString(bmi: Double, bmiText: String): String = when {
+        // Display underweight
         bmi < 18.5 -> "$bmiText - You are underweight."
+        // Display overweight
         bmi > 25 -> "$bmiText - You are overweight."
+        // Display healthy
         else -> "$bmiText - You are a healthy weight."
     }
 
     private fun getGuidanceString(bmiText: String): String {
         val message = " - As you are under 18, please consult with your doctor for the healthy range"
         return when {
+            // Display boy guidance
             binding.rbMale.isChecked -> "$bmiText$message for boys."
+            // Display girl guidance
             binding.rbFemale.isChecked -> "$bmiText$message for girls."
+            // Display general guidance
             else -> "$bmiText$message."
         }
     }
