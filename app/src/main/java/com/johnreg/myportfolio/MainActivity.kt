@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         Item(
             "BMI Calculator",
             "A real life working BMI calculator teaching me Variables, Methods and Conditional Logic.",
-            R.drawable.calculator
+            R.drawable.weight_scale
         ),
         Item(
             "Inches to Meters Converter",
