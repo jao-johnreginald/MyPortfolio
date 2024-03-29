@@ -15,6 +15,7 @@
             android:layout_height="100dp"
             android:contentDescription="@string/weight_scale_image"
             android:src="@drawable/weight_scale"
+            app:layout_constraintBottom_toTopOf="@id/tv_bmi_calculator"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="@string/bmi_calculator"
+            app:layout_constraintBottom_toTopOf="@id/rg_gender"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_weight_scale" />
@@ -35,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/et_age"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_bmi_calculator">
@@ -62,6 +65,7 @@
             android:hint="@string/age"
             android:inputType="number"
             android:textColorHint="@color/brown"
+            app:layout_constraintBottom_toTopOf="@id/ll_height"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rg_gender" />
@@ -72,6 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/et_weight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_age">
@@ -105,6 +110,7 @@
             android:hint="@string/weight_kg"
             android:inputType="number"
             android:textColorHint="@color/brown"
+            app:layout_constraintBottom_toTopOf="@id/btn_calculate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ll_height" />
@@ -115,6 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="@string/calculate"
+            app:layout_constraintBottom_toTopOf="@id/tv_result"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_weight" />
@@ -125,6 +132,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
             android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_calculate" />
