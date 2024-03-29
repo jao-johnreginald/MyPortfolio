@@ -3,13 +3,12 @@ package com.johnreg.myportfolio
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.johnreg.myportfolio.databinding.ActivityMainBinding
 import com.johnreg.myportfolio.firstprojects.BmiActivity
 import com.johnreg.myportfolio.firstprojects.ConverterActivity
 import com.johnreg.myportfolio.firstprojects.QuoteActivity
-import com.johnreg.myportfolio.model.Item
 import com.johnreg.myportfolio.firstprojects.StartActivity
+import com.johnreg.myportfolio.model.Item
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,8 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         projectsAdapter.setOnClickListener(object : ProjectsAdapter.OnClickListener {
             override fun onClick(position: Int) {
-                val intent = parseIntToIntent(position)
-                startActivity(intent)
+                val intentList = getIntents()
+                if (position < intentList.size) startActivity(intentList[position])
             }
         })
     }
@@ -60,12 +59,11 @@ class MainActivity : AppCompatActivity() {
         )
     )
 
-    private fun parseIntToIntent(int: Int): Intent = when (int) {
-        0 -> Intent(this, StartActivity::class.java)
-        1 -> Intent(this, QuoteActivity::class.java)
-        2 -> Intent(this, BmiActivity::class.java)
-        3 -> Intent(this, ConverterActivity::class.java)
-        else -> Intent(this, MainActivity::class.java)
-    }
+    private fun getIntents(): List<Intent> = listOf(
+        Intent(this, StartActivity::class.java),
+        Intent(this, QuoteActivity::class.java),
+        Intent(this, BmiActivity::class.java),
+        Intent(this, ConverterActivity::class.java)
+    )
 
 }
