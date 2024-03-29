@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.johnreg.myportfolio.databinding.ActivityMainBinding
 import com.johnreg.myportfolio.firstprojects.BmiActivity
+import com.johnreg.myportfolio.firstprojects.ConverterActivity
 import com.johnreg.myportfolio.firstprojects.QuoteActivity
 import com.johnreg.myportfolio.model.Item
 import com.johnreg.myportfolio.firstprojects.StartActivity
@@ -64,6 +65,7 @@ class MainActivity : AppCompatActivity() {
         0 -> Intent(this, StartActivity::class.java)
         1 -> Intent(this, QuoteActivity::class.java)
         2 -> Intent(this, BmiActivity::class.java)
+        3 -> Intent(this, ConverterActivity::class.java)
         else -> Intent(this, MainActivity::class.java)
     }
 

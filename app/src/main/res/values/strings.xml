@@ -14,4 +14,7 @@
     <string name="female">Female</string>
     <string name="male">Male</string>
     <string name="weight_scale_image">weight scale image</string>
+
+    <string name="convert_to_meters">Convert to Meters</string>
+    <string name="ruler_image">ruler image</string>
 </resources>
