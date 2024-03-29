@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rvProjects.layoutManager = LinearLayoutManager(this)
         binding.rvProjects.adapter = projectsAdapter
 
         projectsAdapter.setOnClickListener(object : ProjectsAdapter.OnClickListener {
