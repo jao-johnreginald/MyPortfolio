@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.johnreg.myportfolio.databinding.ActivityMainBinding
+import com.johnreg.myportfolio.firstprojects.BmiActivity
 import com.johnreg.myportfolio.firstprojects.QuoteActivity
 import com.johnreg.myportfolio.model.Item
 import com.johnreg.myportfolio.firstprojects.StartActivity
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity() {
     private fun parseIntToIntent(int: Int): Intent = when (int) {
         0 -> Intent(this, StartActivity::class.java)
         1 -> Intent(this, QuoteActivity::class.java)
+        2 -> Intent(this, BmiActivity::class.java)
         else -> Intent(this, MainActivity::class.java)
     }
 
