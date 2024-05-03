@@ -19,8 +19,8 @@
         android:name="com.johnreg.myportfolio.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" >
-        <action
-            android:id="@+id/action_firstFragment_to_projectsFragment"
-            app:destination="@id/projectsFragment" />
+        <argument
+            android:name="project"
+            app:argType="com.johnreg.myportfolio.models.FirstProjects" />
     </fragment>
 </navigation>
