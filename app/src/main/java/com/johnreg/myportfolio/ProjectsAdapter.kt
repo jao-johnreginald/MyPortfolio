@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.johnreg.myportfolio.databinding.ItemProjectBinding
-import com.johnreg.myportfolio.model.Item
+import com.johnreg.myportfolio.models.Item
 
 class ProjectsAdapter(
     private val projects: List<Item>

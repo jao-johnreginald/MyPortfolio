@@ -8,7 +8,7 @@ import com.johnreg.myportfolio.firstprojects.BmiActivity
 import com.johnreg.myportfolio.firstprojects.ConverterActivity
 import com.johnreg.myportfolio.firstprojects.QuoteActivity
 import com.johnreg.myportfolio.firstprojects.StartActivity
-import com.johnreg.myportfolio.model.Item
+import com.johnreg.myportfolio.models.Item
 
 class MainActivity : AppCompatActivity() {
 

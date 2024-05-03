@@ -1,4 +1,4 @@
-package com.johnreg.myportfolio.model
+package com.johnreg.myportfolio.models
 
 data class Item(
     val name: String,
