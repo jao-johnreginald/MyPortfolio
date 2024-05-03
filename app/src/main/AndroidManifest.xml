@@ -13,30 +13,8 @@
         android:theme="@style/Theme.MyPortfolio"
         tools:targetApi="31">
         <activity
-            android:name=".firstprojects.ConverterActivity"
-            android:exported="false"
-            android:label="Inches to Meters Converter"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".firstprojects.BmiActivity"
-            android:exported="false"
-            android:label="BMI Calculator"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".firstprojects.QuoteActivity"
-            android:exported="false"
-            android:label="Quote is love"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".firstprojects.StartActivity"
-            android:exported="false"
-            android:label="Beginner App"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@style/NoActionBarTheme">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
