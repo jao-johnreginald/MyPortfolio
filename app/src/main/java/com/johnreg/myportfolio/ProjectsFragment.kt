@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.johnreg.myportfolio.databinding.FragmentProjectsBinding
 import com.johnreg.myportfolio.models.Item
+import com.johnreg.myportfolio.models.FirstProjects
 
 class ProjectsFragment : Fragment() {
 
@@ -71,7 +72,16 @@ class ProjectsFragment : Fragment() {
 
         projectsAdapter.setOnClickListener(object : ProjectsAdapter.OnClickListener {
             override fun onClick(position: Int) {
-                findNavController().navigate(R.id.action_projectsFragment_to_firstFragment)
+                when (position) {
+                    0 -> {
+                        val action = ProjectsFragmentDirections.actionProjectsFragmentToFirstFragment(FirstProjects.START)
+                        findNavController().navigate(action)
+                    }
+                    1 -> {
+                        val action = ProjectsFragmentDirections.actionProjectsFragmentToFirstFragment(FirstProjects.QUOTE)
+                        findNavController().navigate(action)
+                    }
+                }
             }
         })
     }
