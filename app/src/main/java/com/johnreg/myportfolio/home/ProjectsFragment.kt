@@ -1,4 +1,4 @@
-package com.johnreg.myportfolio
+package com.johnreg.myportfolio.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.johnreg.myportfolio.R
 import com.johnreg.myportfolio.databinding.FragmentProjectsBinding
 import com.johnreg.myportfolio.models.Item
 import com.johnreg.myportfolio.models.FirstProjects

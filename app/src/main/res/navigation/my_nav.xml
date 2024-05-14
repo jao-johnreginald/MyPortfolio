@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/projectsFragment"
-        android:name="com.johnreg.myportfolio.ProjectsFragment"
+        android:name="com.johnreg.myportfolio.home.ProjectsFragment"
         android:label="fragment_projects"
         tools:layout="@layout/fragment_projects" >
         <action

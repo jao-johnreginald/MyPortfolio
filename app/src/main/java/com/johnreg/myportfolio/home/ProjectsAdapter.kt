@@ -1,4 +1,4 @@
-package com.johnreg.myportfolio
+package com.johnreg.myportfolio.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
