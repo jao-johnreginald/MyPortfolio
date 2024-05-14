@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/iv_weight_scale"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/weight_scale_image"
+            android:src="@drawable/weight_scale"
+            app:layout_constraintBottom_toTopOf="@id/tv_bmi_calculator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_bmi_calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/bmi_calculator"
+            app:layout_constraintBottom_toTopOf="@id/rg_gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_weight_scale" />
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/et_age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bmi_calculator">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_age"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:autofillHints="age"
+            android:hint="@string/age"
+            android:inputType="number"
+            android:textColorHint="@color/brown"
+            app:layout_constraintBottom_toTopOf="@id/ll_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg_gender" />
+
+        <LinearLayout
+            android:id="@+id/ll_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/et_weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_age">
+
+            <EditText
+                android:id="@+id/et_feet"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:autofillHints="feet"
+                android:hint="@string/feet"
+                android:inputType="number"
+                android:textColorHint="@color/brown" />
+
+            <EditText
+                android:id="@+id/et_inches"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:autofillHints="inches"
+                android:hint="@string/inches"
+                android:inputType="number"
+                android:textColorHint="@color/brown" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:autofillHints="weight"
+            android:hint="@string/weight_kg"
+            android:inputType="number"
+            android:textColorHint="@color/brown"
+            app:layout_constraintBottom_toTopOf="@id/btn_calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_height" />
+
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/calculate"
+            app:layout_constraintBottom_toTopOf="@id/tv_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_weight" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_calculate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

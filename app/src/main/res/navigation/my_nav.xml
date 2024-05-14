@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_projectsFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_bmiFragment"
+            app:destination="@id/bmiFragment" />
     </fragment>
     <fragment
         android:id="@+id/firstFragment"
@@ -23,4 +26,9 @@
             android:name="project"
             app:argType="com.johnreg.myportfolio.models.FirstProjects" />
     </fragment>
+    <fragment
+        android:id="@+id/bmiFragment"
+        android:name="com.johnreg.myportfolio.BmiFragment"
+        android:label="fragment_bmi"
+        tools:layout="@layout/fragment_bmi" />
 </navigation>
