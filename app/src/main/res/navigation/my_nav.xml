@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.johnreg.myportfolio.FirstFragment"
+        android:name="com.johnreg.myportfolio.firstprojects.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" >
         <argument
@@ -31,12 +31,12 @@
     </fragment>
     <fragment
         android:id="@+id/bmiFragment"
-        android:name="com.johnreg.myportfolio.BmiFragment"
+        android:name="com.johnreg.myportfolio.firstprojects.BmiFragment"
         android:label="fragment_bmi"
         tools:layout="@layout/fragment_bmi" />
     <fragment
         android:id="@+id/converterFragment"
-        android:name="com.johnreg.myportfolio.ConverterFragment"
+        android:name="com.johnreg.myportfolio.firstprojects.ConverterFragment"
         android:label="fragment_converter"
         tools:layout="@layout/fragment_converter" />
 </navigation>

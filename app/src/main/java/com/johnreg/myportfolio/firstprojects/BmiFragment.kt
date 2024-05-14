@@ -1,4 +1,4 @@
-package com.johnreg.myportfolio
+package com.johnreg.myportfolio.firstprojects
 
 import android.os.Bundle
 import android.view.LayoutInflater
