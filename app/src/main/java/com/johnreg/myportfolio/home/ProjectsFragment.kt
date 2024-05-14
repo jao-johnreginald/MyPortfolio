@@ -1,15 +1,15 @@
 package com.johnreg.myportfolio.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.johnreg.myportfolio.R
 import com.johnreg.myportfolio.databinding.FragmentProjectsBinding
-import com.johnreg.myportfolio.models.Item
 import com.johnreg.myportfolio.models.FirstProjects
+import com.johnreg.myportfolio.models.Item
 
 class ProjectsFragment : Fragment() {
 
@@ -82,6 +82,8 @@ class ProjectsFragment : Fragment() {
                         val action = ProjectsFragmentDirections.actionProjectsFragmentToFirstFragment(FirstProjects.QUOTE)
                         findNavController().navigate(action)
                     }
+                    2 -> findNavController().navigate(R.id.action_projectsFragment_to_bmiFragment)
+                    3 -> findNavController().navigate(R.id.action_projectsFragment_to_converterFragment)
                 }
             }
         })
