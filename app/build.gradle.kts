@@ -21,7 +21,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -53,6 +54,9 @@ dependencies {
     val navVersion = "2.7.7"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+
+    // debugImplementation because LeakCanary should only run in debug builds.
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
