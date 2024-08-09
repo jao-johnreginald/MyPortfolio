@@ -75,11 +75,13 @@ class ProjectsFragment : Fragment() {
             override fun onClick(position: Int) {
                 when (position) {
                     0 -> {
-                        val action = ProjectsFragmentDirections.actionProjectsFragmentToFirstFragment(FirstProjects.START)
+                        val action = ProjectsFragmentDirections
+                            .actionProjectsFragmentToFirstFragment(FirstProjects.START)
                         findNavController().navigate(action)
                     }
                     1 -> {
-                        val action = ProjectsFragmentDirections.actionProjectsFragmentToFirstFragment(FirstProjects.QUOTE)
+                        val action = ProjectsFragmentDirections
+                            .actionProjectsFragmentToFirstFragment(FirstProjects.QUOTE)
                         findNavController().navigate(action)
                     }
                     2 -> findNavController().navigate(R.id.action_projectsFragment_to_bmiFragment)
