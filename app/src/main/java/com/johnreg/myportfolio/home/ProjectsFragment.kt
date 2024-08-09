@@ -23,7 +23,7 @@ class ProjectsFragment : Fragment() {
         Item(
             "Start",
             "Our very first project, the default 'Hello World' app!",
-            R.drawable.getting_started
+            R.drawable.ruler
         ),
         Item(
             "Quote Project",
@@ -33,7 +33,7 @@ class ProjectsFragment : Fragment() {
         Item(
             "BMI Calculator",
             "A real life working BMI calculator teaching me Variables, Methods and Conditional Logic.",
-            R.drawable.weight_scale
+            R.drawable.ruler
         ),
         Item(
             "Inches to Meters Converter",
