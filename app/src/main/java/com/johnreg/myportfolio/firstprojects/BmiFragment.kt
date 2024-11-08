@@ -92,14 +92,14 @@ class BmiFragment : Fragment() {
     }
 
     private fun getGuidanceString(bmiText: String): String {
-        val message = " - As you are under 18, please consult with your doctor for the healthy range"
+        val message = "- As you are under 18, please consult with your doctor for the healthy range"
         return when {
             // Display boy guidance
-            binding.rbMale.isChecked -> "$bmiText$message for boys."
+            binding.rbMale.isChecked -> "$bmiText $message for boys."
             // Display girl guidance
-            binding.rbFemale.isChecked -> "$bmiText$message for girls."
+            binding.rbFemale.isChecked -> "$bmiText $message for girls."
             // Display general guidance
-            else -> "$bmiText$message."
+            else -> "$bmiText $message."
         }
     }
 
