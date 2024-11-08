@@ -7,10 +7,9 @@ import com.johnreg.myportfolio.databinding.ItemProjectBinding
 import com.johnreg.myportfolio.models.Item
 
 class ProjectsAdapter(
-    private val projects: List<Item>
+    private val projects: List<Item>,
+    private val onItemClick: (Int) -> Unit
 ) : RecyclerView.Adapter<ProjectsAdapter.ProjectViewHolder>() {
-
-    private var onClickListener: OnClickListener? = null
 
     override fun getItemCount(): Int = projects.size
 
@@ -31,16 +30,8 @@ class ProjectsAdapter(
             binding.tvTitle.text = project.name
             binding.tvDescription.text = project.description
             binding.ivIcon.setImageResource(project.image)
-            itemView.setOnClickListener { onClickListener?.onClick(adapterPosition) }
+            itemView.setOnClickListener { onItemClick(adapterPosition) }
         }
-    }
-
-    interface OnClickListener {
-        fun onClick(position: Int)
-    }
-
-    fun setOnClickListener(listener: OnClickListener) {
-        onClickListener = listener
     }
 
 }
