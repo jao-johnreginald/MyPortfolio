@@ -27,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/bmi_calculator"
-            app:layout_constraintEnd_toEndOf="@+id/iv_weight_scale"
-            app:layout_constraintStart_toStartOf="@+id/iv_weight_scale"
+            app:layout_constraintEnd_toEndOf="@id/iv_weight_scale"
+            app:layout_constraintStart_toStartOf="@id/iv_weight_scale"
             app:layout_constraintTop_toBottomOf="@id/iv_weight_scale" />
 
         <RadioGroup
@@ -37,8 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_bmi_calculator"
-            app:layout_constraintStart_toStartOf="@+id/tv_bmi_calculator"
+            app:layout_constraintEnd_toEndOf="@id/tv_bmi_calculator"
+            app:layout_constraintStart_toStartOf="@id/tv_bmi_calculator"
             app:layout_constraintTop_toBottomOf="@id/tv_bmi_calculator">
 
             <RadioButton
@@ -64,8 +64,8 @@
             android:hint="@string/age"
             android:inputType="number"
             android:textColorHint="@color/brown"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/rg_gender"
+            app:layout_constraintStart_toStartOf="@id/rg_gender"
             app:layout_constraintTop_toBottomOf="@id/rg_gender" />
 
         <LinearLayout
@@ -74,8 +74,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/et_age"
+            app:layout_constraintStart_toStartOf="@id/et_age"
             app:layout_constraintTop_toBottomOf="@id/et_age">
 
             <EditText
@@ -107,8 +107,8 @@
             android:hint="@string/weight_kg"
             android:inputType="number"
             android:textColorHint="@color/brown"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ll_height"
+            app:layout_constraintStart_toStartOf="@id/ll_height"
             app:layout_constraintTop_toBottomOf="@id/ll_height" />
 
         <Button
@@ -117,8 +117,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/calculate"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/et_weight"
+            app:layout_constraintStart_toStartOf="@id/et_weight"
             app:layout_constraintTop_toBottomOf="@id/et_weight" />
 
         <TextView
