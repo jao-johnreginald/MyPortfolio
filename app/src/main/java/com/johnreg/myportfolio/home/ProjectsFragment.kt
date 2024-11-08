@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.johnreg.myportfolio.R
 import com.johnreg.myportfolio.databinding.FragmentProjectsBinding
 import com.johnreg.myportfolio.models.FirstProjects
-import com.johnreg.myportfolio.models.Item
+import com.johnreg.myportfolio.models.Projects.projects
 
 class ProjectsFragment : Fragment() {
 
@@ -19,45 +19,17 @@ class ProjectsFragment : Fragment() {
     private var _projectsAdapter: ProjectsAdapter? = null
     private val projectsAdapter get() = _projectsAdapter!!
 
-    private val projects = listOf(
-        Item(
-            "Start",
-            "Our very first project, the default 'Hello World' app!",
-            R.drawable.ruler
-        ),
-        Item(
-            "Quote Project",
-            "Making a simple change to the layout, with my own personal motivational quote for software developers.",
-            R.drawable.quote
-        ),
-        Item(
-            "BMI Calculator",
-            "A real life working BMI calculator teaching me Variables, Methods and Conditional Logic.",
-            R.drawable.ruler
-        ),
-        Item(
-            "Inches to Meters Converter",
-            "My own personal calculator app I made on my own to convert inches to meters.",
-            R.drawable.ruler
-        ),
-        Item(
-            "Reginald's Restaurant",
-            "A menu app for a fictional restaurant, learning about Activities, Classes & Objects, Arrays, Intents and ListViews.",
-            R.drawable.restaurant
-        )
-    )
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentProjectsBinding.inflate(inflater, container, false)
+        _projectsAdapter = ProjectsAdapter(projects)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _projectsAdapter = ProjectsAdapter(projects)
 
         setAdapter()
     }
@@ -74,16 +46,18 @@ class ProjectsFragment : Fragment() {
         projectsAdapter.setOnClickListener(object : ProjectsAdapter.OnClickListener {
             override fun onClick(position: Int) {
                 when (position) {
-                    0 -> {
-                        val action = ProjectsFragmentDirections
-                            .actionProjectsFragmentToFirstFragment(FirstProjects.START)
-                        findNavController().navigate(action)
-                    }
-                    1 -> {
-                        val action = ProjectsFragmentDirections
-                            .actionProjectsFragmentToFirstFragment(FirstProjects.QUOTE)
-                        findNavController().navigate(action)
-                    }
+                    0 -> findNavController().navigate(
+                        ProjectsFragmentDirections.actionProjectsFragmentToFirstFragment(
+                            FirstProjects.START
+                        )
+                    )
+
+                    1 -> findNavController().navigate(
+                        ProjectsFragmentDirections.actionProjectsFragmentToFirstFragment(
+                            FirstProjects.QUOTE
+                        )
+                    )
+
                     2 -> findNavController().navigate(R.id.action_projectsFragment_to_bmiFragment)
                     3 -> findNavController().navigate(R.id.action_projectsFragment_to_converterFragment)
                 }

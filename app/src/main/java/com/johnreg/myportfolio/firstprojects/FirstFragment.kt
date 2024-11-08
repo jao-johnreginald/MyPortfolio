@@ -27,10 +27,6 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setTextView()
-    }
-
-    private fun setTextView() {
         when (args.project) {
             FirstProjects.START -> binding.tvFirst.text = getString(R.string.hello_world)
             FirstProjects.QUOTE -> binding.tvFirst.text = getString(R.string.quote)
