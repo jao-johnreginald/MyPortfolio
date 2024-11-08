@@ -27,9 +27,9 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        when (args.project) {
-            FirstProjects.START -> binding.tvFirst.text = getString(R.string.hello_world)
-            FirstProjects.QUOTE -> binding.tvFirst.text = getString(R.string.quote)
+        binding.tvFirst.text = when (args.project) {
+            FirstProjects.START -> getString(R.string.hello_world)
+            FirstProjects.QUOTE -> getString(R.string.quote)
         }
     }
 
