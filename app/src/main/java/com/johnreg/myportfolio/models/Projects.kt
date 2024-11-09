@@ -6,7 +6,7 @@ object Projects {
 
     val projects = listOf(
         Item(
-            "Start",
+            "Getting Started",
             "Our very first project, the default 'Hello World' app!",
             R.drawable.getting_started
         ),

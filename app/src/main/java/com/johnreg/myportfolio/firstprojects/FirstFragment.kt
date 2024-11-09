@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.johnreg.myportfolio.R
@@ -26,6 +27,11 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = when (args.project) {
+            FirstProjects.START -> "Getting Started"
+            FirstProjects.QUOTE -> "Quote Project"
+        }
 
         binding.tvFirst.text = when (args.project) {
             FirstProjects.START -> getString(R.string.hello_world)
