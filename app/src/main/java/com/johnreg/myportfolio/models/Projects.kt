@@ -8,7 +8,7 @@ object Projects {
         Item(
             "Start",
             "Our very first project, the default 'Hello World' app!",
-            R.drawable.ruler
+            R.drawable.getting_started
         ),
         Item(
             "Quote Project",
@@ -18,7 +18,7 @@ object Projects {
         Item(
             "BMI Calculator",
             "A real life working BMI calculator teaching me Variables, Methods and Conditional Logic.",
-            R.drawable.ruler
+            R.drawable.weight_scale
         ),
         Item(
             "Inches to Meters Converter",
