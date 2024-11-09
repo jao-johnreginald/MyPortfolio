@@ -1,70 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".firstprojects.ConverterFragment">
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_ruler"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/ruler_image"
+            android:src="@drawable/ruler"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/iv_ruler"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="12dp"
-                android:contentDescription="@string/ruler_image"
-                android:src="@drawable/ruler"
-                app:layout_constraintBottom_toTopOf="@id/et_inches_converter"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/et_inches_converter"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:autofillHints="inches"
+            android:hint="@string/inches"
+            android:inputType="number"
+            android:textColorHint="@color/brown"
+            app:layout_constraintEnd_toEndOf="@id/iv_ruler"
+            app:layout_constraintStart_toStartOf="@id/iv_ruler"
+            app:layout_constraintTop_toBottomOf="@id/iv_ruler" />
 
-            <EditText
-                android:id="@+id/et_inches_converter"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_margin="12dp"
-                android:autofillHints="inches"
-                android:hint="@string/inches"
-                android:inputType="number"
-                android:textColorHint="@color/brown"
-                app:layout_constraintBottom_toTopOf="@id/btn_convert"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_ruler" />
+        <Button
+            android:id="@+id/btn_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/convert_to_meters"
+            app:layout_constraintEnd_toEndOf="@id/et_inches_converter"
+            app:layout_constraintStart_toStartOf="@id/et_inches_converter"
+            app:layout_constraintTop_toBottomOf="@id/et_inches_converter" />
 
-            <Button
-                android:id="@+id/btn_convert"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:text="@string/convert_to_meters"
-                app:layout_constraintBottom_toTopOf="@id/tv_result_converter"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_inches_converter" />
-
-            <TextView
-                android:id="@+id/tv_result_converter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="36dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btn_convert" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_result_converter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_convert" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
